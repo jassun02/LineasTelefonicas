@@ -17,13 +17,22 @@ public class Registro extends javax.swing.JFrame {
      * Creates new form Registro
      */
     Empresa empresa = new Empresa();
-
+    
     public Registro() {
         initComponents();
         empresa.inicializar();
         lbLlamadas.setText(empresa.darTotalNumeroLlamadas() + "");
         lbMinutos.setText(empresa.darTotalMinutos() + "");
         lbPromedio.setText(empresa.darCostoPromedioMinuto() + "");
+        Lbllamadas1.setText(empresa.darLinea1().darNumeroLlamadas() + "");
+        lbMinutos1.setText(empresa.darLinea1().darNumeroMinutos() + "");
+        lbValor1.setText(empresa.darLinea1().darCostoLlamadas() + "");
+        Lbllamadas2.setText(empresa.darLinea2().darNumeroLlamadas() + "");
+        lbMinutos2.setText(empresa.darLinea2().darNumeroMinutos() + "");
+        lbValor2.setText(empresa.darLinea2().darCostoLlamadas() + "");
+        Lbllamadas3.setText(empresa.darLinea3().darNumeroLlamadas() + "");
+        lbMinutos3.setText(empresa.darLinea3().darNumeroMinutos() + "");
+        lbValor3.setText(empresa.darLinea3().darCostoLlamadas() + "");
         rbLocal1.setSelected(true);
         rbLocal2.setSelected(true);
         rbLocal3.setSelected(true);
@@ -52,18 +61,36 @@ public class Registro extends javax.swing.JFrame {
         rbLargaDistancia1 = new javax.swing.JRadioButton();
         rbCelular1 = new javax.swing.JRadioButton();
         btnLinea1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        Lbllamadas1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        lbMinutos1 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        lbValor1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         rbLocal2 = new javax.swing.JRadioButton();
         rbLargaDistancia2 = new javax.swing.JRadioButton();
         rbCelular2 = new javax.swing.JRadioButton();
         btnLinea2 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        Lbllamadas2 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        lbMinutos2 = new javax.swing.JLabel();
+        lbValor2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         rbLocal3 = new javax.swing.JRadioButton();
         rbLargaDistancia3 = new javax.swing.JRadioButton();
         rbCelular3 = new javax.swing.JRadioButton();
         btnLinea3 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        Lbllamadas3 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        lbMinutos3 = new javax.swing.JLabel();
+        lbValor3 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         lbLlamadas = new javax.swing.JLabel();
@@ -135,6 +162,18 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setText("Total Llamadas");
+
+        Lbllamadas1.setText(" ");
+
+        jLabel9.setText("Total Minutos");
+
+        lbMinutos1.setText(" ");
+
+        jLabel10.setText("Promedio Valor Minuto");
+
+        lbValor1.setText(" ");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -156,8 +195,26 @@ public class Registro extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(btnLinea1))
-                            .addComponent(rbCelular1))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                            .addComponent(rbCelular1)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel8))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(Lbllamadas1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lbMinutos1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel10))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lbValor1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,6 +228,18 @@ public class Registro extends javax.swing.JFrame {
                 .addComponent(rbCelular1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLinea1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lbllamadas1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbMinutos1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbValor1)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -196,10 +265,31 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setText("Total Llamadas");
+
+        Lbllamadas2.setText(" ");
+
+        jLabel12.setText("Total Minutos");
+
+        jLabel13.setText("Promedio Valor Minuto");
+
+        lbMinutos2.setText(" ");
+
+        lbValor2.setText(" ");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
+                    .addComponent(Lbllamadas2)
+                    .addComponent(jLabel12)
+                    .addComponent(lbMinutos2)
+                    .addComponent(lbValor2))
+                .addGap(45, 45, 45))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -217,8 +307,11 @@ public class Registro extends javax.swing.JFrame {
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(21, 21, 21)
                                 .addComponent(btnLinea2))
-                            .addComponent(rbCelular2))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                            .addComponent(rbCelular2)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel13)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -230,9 +323,21 @@ public class Registro extends javax.swing.JFrame {
                 .addComponent(rbLargaDistancia2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(rbCelular2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnLinea2)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lbllamadas2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbMinutos2)
+                .addGap(10, 10, 10)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(lbValor2)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -257,6 +362,18 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setText("Total Llamadas");
+
+        Lbllamadas3.setText(" ");
+
+        jLabel15.setText("Total Minutos");
+
+        jLabel16.setText("Promedio Valor Minuto");
+
+        lbMinutos3.setText(" ");
+
+        lbValor3.setText(" ");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -264,18 +381,30 @@ public class Registro extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(rbCelular3)
-                            .addComponent(rbLargaDistancia3)
-                            .addComponent(rbLocal3)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(21, 21, 21)
-                                .addComponent(btnLinea3))))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(34, 34, 34)
-                        .addComponent(jLabel3)))
-                .addContainerGap(17, Short.MAX_VALUE))
+                                .addContainerGap()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(rbCelular3)
+                                    .addComponent(rbLargaDistancia3)
+                                    .addComponent(rbLocal3)
+                                    .addGroup(jPanel4Layout.createSequentialGroup()
+                                        .addGap(21, 21, 21)
+                                        .addComponent(btnLinea3))))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel3)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addGap(0, 15, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel14)
+                            .addComponent(Lbllamadas3)
+                            .addComponent(jLabel15)
+                            .addComponent(lbMinutos3)
+                            .addComponent(jLabel16)
+                            .addComponent(lbValor3))))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -289,7 +418,19 @@ public class Registro extends javax.swing.JFrame {
                 .addComponent(rbCelular3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnLinea3)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Lbllamadas3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbMinutos3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lbValor3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -343,33 +484,32 @@ public class Registro extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(19, 19, 19))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -385,8 +525,8 @@ public class Registro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -416,6 +556,9 @@ public class Registro extends javax.swing.JFrame {
         lbLlamadas.setText(empresa.darTotalNumeroLlamadas() + "");
         lbMinutos.setText(empresa.darTotalMinutos() + "");
         lbPromedio.setText(empresa.darCostoPromedioMinuto() + "");
+        Lbllamadas3.setText(empresa.darLinea3().darNumeroLlamadas() + "");
+        lbMinutos3.setText(empresa.darLinea3().darNumeroMinutos() + "");
+        lbValor3.setText(empresa.darLinea3().darCostoLlamadas() + "");
         txtMinutos.setText("");
     }//GEN-LAST:event_btnLinea3ActionPerformed
 
@@ -432,6 +575,9 @@ public class Registro extends javax.swing.JFrame {
         lbLlamadas.setText(empresa.darTotalNumeroLlamadas() + "");
         lbMinutos.setText(empresa.darTotalMinutos() + "");
         lbPromedio.setText(empresa.darCostoPromedioMinuto() + "");
+        Lbllamadas2.setText(empresa.darLinea2().darNumeroLlamadas() + "");
+        lbMinutos2.setText(empresa.darLinea2().darNumeroMinutos() + "");
+        lbValor2.setText(empresa.darLinea2().darCostoLlamadas() + "");
         txtMinutos.setText("");
     }//GEN-LAST:event_btnLinea2ActionPerformed
 
@@ -445,6 +591,9 @@ public class Registro extends javax.swing.JFrame {
         } else {
             empresa.agregarLlamadaCelularLinea1(Integer.parseInt(txtMinutos.getText()));
         }
+        Lbllamadas1.setText(empresa.darLinea1().darNumeroLlamadas() + "");
+        lbMinutos1.setText(empresa.darLinea1().darNumeroMinutos() + "");
+        lbValor1.setText(empresa.darLinea1().darCostoLlamadas() + "");
         lbLlamadas.setText(empresa.darTotalNumeroLlamadas() + "");
         lbMinutos.setText(empresa.darTotalMinutos() + "");
         lbPromedio.setText(empresa.darCostoPromedioMinuto() + "");
@@ -487,6 +636,9 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Lbllamadas1;
+    private javax.swing.JLabel Lbllamadas2;
+    private javax.swing.JLabel Lbllamadas3;
     private javax.swing.JButton btnLinea1;
     private javax.swing.JButton btnLinea2;
     private javax.swing.JButton btnLinea3;
@@ -495,12 +647,21 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -509,7 +670,13 @@ public class Registro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel lbLlamadas;
     private javax.swing.JLabel lbMinutos;
+    private javax.swing.JLabel lbMinutos1;
+    private javax.swing.JLabel lbMinutos2;
+    private javax.swing.JLabel lbMinutos3;
     private javax.swing.JLabel lbPromedio;
+    private javax.swing.JLabel lbValor1;
+    private javax.swing.JLabel lbValor2;
+    private javax.swing.JLabel lbValor3;
     private javax.swing.JRadioButton rbCelular1;
     private javax.swing.JRadioButton rbCelular2;
     private javax.swing.JRadioButton rbCelular3;
